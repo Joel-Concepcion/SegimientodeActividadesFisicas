@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguimiento de actividades fisicas</title>
+  <link rel="stylesheet" href="Style.css">
+  <script src="Scrip.JS"></script>
+</head>
+
+<body>
+
+  <h2>Registro de Actividad Física Diaria</h2>
+
+  <form id="activityForm">
+
+    <div clss="div1">
+      <div>
+        <label for="steps">Pasos:</label>
+        <input type="number" id="steps" name="steps" required>
+      </div>
+      <div>
+        <label for="distance">Distancia (km):</label>
+        <input type="number" id="distance" name="distance" step="0.01" required>
+      </div>
+      <div>
+        <label for="time">Tiempo (minutos):</label>
+        <input type="number" id="time" name="time" required>
+      </div>
+      <div>
+        <input type="submit" value="Registrar">
+      </div>
+    </div>
+
+    <button onclick="connectToDevice()">Conectar/Bluetooth</button>
+  </form>
+
+
+  <h2>Actividad Física Registrada</h2>
+  <div id="activityDisplay"></div>
+
+  <h2>Estadísticas de Actividad Física</h2>
+  <canvas id="activityChart" width="400" height="200"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </div>
+
+</body>
+
+</html>
